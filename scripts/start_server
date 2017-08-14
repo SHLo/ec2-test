@@ -2,5 +2,6 @@
 cd /home/ec2-user/node-website
 export PORT=80
 echo aaaaaaaaaaaaaaaaaaaaaaaa
+for line in $( cat /etc/environment ) ; do export $line ; done
 echo $SERVICE_PORT
 forever start app.js
